@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const MobileNavigation = () => {
   return (
-    <section className='lg:hidden bg-black bg-opacity-70  backdrop-blur-3xl fixed bottom-0 w-full h-14 z-40'>
+    <section className='lg:hidden bg-black bg-opacity-60  backdrop-blur-3xl fixed bottom-0 w-full h-14 z-40'>
           <div className='flex justify-between items-center h-full text-neutral-500 '>
             {
               mobileNavigation.map((nav, index) => {
