@@ -6,12 +6,19 @@ import { Link } from 'react-router-dom'
 
 
 
-const Card = ({data, trending, index}) => {
+const Card = ({data, trending, index, media_type}) => {
   const imageURL = useSelector(state => state.movieoData.imageURL)
 
+
+  const mediaType = data.media_type ?? media_type
+
   return (
-    <Link to={"/"+data.media_type+"/"+data.id} className='w-full min-w-[230px] max-w-[230px] rounded h-80 overflow-hidden relative'>
+    <Link to={"/"+mediaType+"/"+data.id} className='w-full min-w-[230px] max-w-[230px] rounded h-80 block overflow-hidden relative hover:scale-110 transition-all'>
+      
       <img src={imageURL+data?.poster_path} alt="" />
+        
+        
+        
         <div className='absolute top-4'>
         {
         trending && (
